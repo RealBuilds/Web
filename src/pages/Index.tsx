@@ -10,39 +10,69 @@ import { SuggestedAthletes } from "@/components/SuggestedAthletes";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-purple-50 to-teal-50">
+    <div className="min-h-screen bg-slate-50">
       <Header />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* Left Sidebar - Hidden on mobile */}
-          <div className="hidden lg:block lg:col-span-3">
-            <div className="sticky top-24 space-y-6">
-              <TrendingTopics />
-              <SuggestedAthletes />
-            </div>
+      
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-3xl lg:text-4xl font-bold mb-2">The Athlete's Arena</h1>
+            <p className="text-slate-300 text-lg">Where champions share their journey</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Sports Categories - Full Width */}
+        <div className="mb-8">
+          <SportsCategories />
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* Left Sidebar - Compact */}
+          <div className="lg:col-span-1 space-y-6">
+            <Stories />
+            <TrendingTopics />
           </div>
 
-          {/* Main Feed */}
-          <div className="lg:col-span-6 space-y-6">
-            <Stories />
-            <SportsCategories />
+          {/* Main Content - Wider */}
+          <div className="lg:col-span-2 space-y-6">
             <CreatePost />
             <Feed />
           </div>
 
-          {/* Right Sidebar - Hidden on mobile */}
-          <div className="hidden lg:block lg:col-span-3">
-            <div className="sticky top-24">
-              <div className="bg-white rounded-lg shadow-sm border p-6">
-                <h3 className="font-semibold text-slate-900 mb-4">Live Sports Updates</h3>
-                <div className="space-y-3">
-                  <div className="text-sm">
-                    <div className="font-medium">NBA Finals Game 4</div>
-                    <div className="text-slate-600">Lakers 108 - Celtics 102</div>
+          {/* Right Sidebar */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-24 space-y-6">
+              <SuggestedAthletes />
+              
+              {/* Live Scores Widget */}
+              <div className="bg-white rounded-xl shadow-sm border p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="font-bold text-slate-900">Live Scores</h3>
+                  <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center py-2 border-b border-slate-100">
+                    <div className="text-sm">
+                      <div className="font-semibold">Lakers vs Warriors</div>
+                      <div className="text-slate-500">Q4 - 2:45</div>
+                    </div>
+                    <div className="text-right text-sm font-bold">
+                      <div>108</div>
+                      <div>102</div>
+                    </div>
                   </div>
-                  <div className="text-sm">
-                    <div className="font-medium">UEFA Champions League</div>
-                    <div className="text-slate-600">Barcelona vs PSG - 8:00 PM</div>
+                  <div className="flex justify-between items-center py-2">
+                    <div className="text-sm">
+                      <div className="font-semibold">Chiefs vs Bills</div>
+                      <div className="text-slate-500">Final</div>
+                    </div>
+                    <div className="text-right text-sm font-bold">
+                      <div>24</div>
+                      <div>21</div>
+                    </div>
                   </div>
                 </div>
               </div>

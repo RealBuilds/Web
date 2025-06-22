@@ -1,5 +1,5 @@
 
-import { ChevronLeft, ChevronRight, Plus } from "lucide-react";
+import { ChevronLeft, ChevronRight, Plus, Play } from "lucide-react";
 import { useState } from "react";
 
 export const Stories = () => {
@@ -8,7 +8,7 @@ export const Stories = () => {
   const stories = [
     {
       id: 1,
-      athlete: "You",
+      athlete: "Add Story",
       avatar: null,
       isOwn: true
     },
@@ -16,69 +16,67 @@ export const Stories = () => {
       id: 2,
       athlete: "Sarah Chen",
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-      hasNewStory: true
+      hasNewStory: true,
+      storyType: "training"
     },
     {
       id: 3,
       athlete: "Marcus Johnson",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-      hasNewStory: true
+      hasNewStory: true,
+      storyType: "game"
     },
     {
       id: 4,
       athlete: "Elena Rodriguez",
       avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=100&h=100&fit=crop&crop=face",
-      hasNewStory: false
-    },
-    {
-      id: 5,
-      athlete: "David Park",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-      hasNewStory: true
-    },
-    {
-      id: 6,
-      athlete: "Carlos Martinez",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
-      hasNewStory: false
+      hasNewStory: false,
+      storyType: "recovery"
     }
   ];
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border p-4">
+    <div className="bg-white rounded-xl shadow-sm border p-5">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="font-semibold text-slate-900">Stories</h3>
-        <div className="flex space-x-2">
-          <button className="p-1 rounded-full hover:bg-slate-100">
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-          <button className="p-1 rounded-full hover:bg-slate-100">
-            <ChevronRight className="w-4 h-4" />
-          </button>
+        <h3 className="font-bold text-slate-900">Training Stories</h3>
+        <div className="text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded-full">
+          Live Updates
         </div>
       </div>
       
-      <div className="flex space-x-4 overflow-x-auto pb-2">
+      <div className="space-y-3">
         {stories.map((story) => (
-          <div key={story.id} className="flex-shrink-0 text-center cursor-pointer group">
-            <div className="relative">
+          <div key={story.id} className="flex items-center space-x-3 cursor-pointer group hover:bg-slate-50 rounded-lg p-2 -mx-2">
+            <div className="relative flex-shrink-0">
               {story.isOwn ? (
-                <div className="w-16 h-16 bg-gradient-to-br from-slate-200 to-slate-300 rounded-full flex items-center justify-center border-2 border-transparent">
-                  <Plus className="w-6 h-6 text-slate-600" />
+                <div className="w-12 h-12 bg-gradient-to-br from-slate-200 to-slate-300 rounded-xl flex items-center justify-center border-2 border-slate-200">
+                  <Plus className="w-5 h-5 text-slate-600" />
                 </div>
               ) : (
-                <div className={`w-16 h-16 rounded-full p-0.5 ${story.hasNewStory ? 'bg-gradient-to-tr from-pink-500 to-orange-500' : 'bg-slate-300'}`}>
+                <div className={`w-12 h-12 rounded-xl p-0.5 ${story.hasNewStory ? 'bg-gradient-to-tr from-blue-500 to-purple-500' : 'bg-slate-300'}`}>
                   <img 
                     src={story.avatar} 
                     alt={story.athlete}
-                    className="w-full h-full rounded-full object-cover border-2 border-white"
+                    className="w-full h-full rounded-lg object-cover"
                   />
+                  {story.hasNewStory && (
+                    <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center shadow-sm">
+                      <Play className="w-3 h-3 text-blue-500 fill-current" />
+                    </div>
+                  )}
                 </div>
               )}
             </div>
-            <p className="text-xs text-slate-600 mt-2 max-w-[64px] truncate">
-              {story.athlete}
-            </p>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-medium text-slate-900 truncate">
+                {story.athlete}
+              </p>
+              {!story.isOwn && (
+                <p className="text-xs text-slate-500 capitalize">
+                  {story.storyType} session
+                </p>
+              )}
+            </div>
           </div>
         ))}
       </div>
