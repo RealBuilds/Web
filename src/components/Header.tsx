@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Menu, X, Search, Bell, MessageCircle, Trophy, Target, Zap } from "lucide-react";
+import { Menu, X, Search, Bell, MessageCircle, Trophy, Target, Zap, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Header = () => {
@@ -30,6 +30,10 @@ export const Header = () => {
             <Button variant="ghost" size="sm" className="rounded-full bg-white shadow-sm px-6">
               <Target className="w-4 h-4 mr-2" />
               Feed
+            </Button>
+            <Button variant="ghost" size="sm" className="rounded-full px-6 text-slate-600">
+              <Play className="w-4 h-4 mr-2 text-red-500" />
+              Streams
             </Button>
             <Button variant="ghost" size="sm" className="rounded-full px-6 text-slate-600">
               <Zap className="w-4 h-4 mr-2" />
@@ -97,6 +101,10 @@ export const Header = () => {
                 <a href="#" className="flex items-center space-x-3 text-slate-700 hover:text-slate-900 font-medium py-3 px-4 rounded-lg hover:bg-slate-50">
                   <Target className="w-5 h-5" />
                   <span>Feed</span>
+                </a>
+                <a href="#" className="flex items-center space-x-3 text-slate-700 hover:text-slate-900 font-medium py-3 px-4 rounded-lg hover:bg-slate-50">
+                  <Play className="w-5 h-5 text-red-500" />
+                  <span>Streams</span>
                 </a>
                 <a href="#" className="flex items-center space-x-3 text-slate-700 hover:text-slate-900 font-medium py-3 px-4 rounded-lg hover:bg-slate-50">
                   <Zap className="w-5 h-5" />

@@ -7,6 +7,7 @@ import { CreatePost } from "@/components/CreatePost";
 import { Feed } from "@/components/Feed";
 import { TrendingTopics } from "@/components/TrendingTopics";
 import { SuggestedAthletes } from "@/components/SuggestedAthletes";
+import { StreamingSection } from "@/components/StreamingSection";
 
 const Index = () => {
   return (
@@ -18,33 +19,30 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-3xl lg:text-4xl font-bold mb-2">The Athlete's Arena</h1>
-            <p className="text-slate-300 text-lg">Where champions share their journey</p>
+            <p className="text-slate-300 text-lg">Where champions share their journey & stream live</p>
           </div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Sports Categories - Full Width */}
-        <div className="mb-8">
-          <SportsCategories />
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Left Sidebar - Compact */}
-          <div className="lg:col-span-1 space-y-6">
+        <div className="flex gap-8">
+          {/* Left Sidebar */}
+          <div className="w-64 flex-shrink-0 space-y-6">
+            <SportsCategories />
             <Stories />
             <TrendingTopics />
           </div>
 
-          {/* Main Content - Wider */}
-          <div className="lg:col-span-2 space-y-6">
+          {/* Main Content */}
+          <div className="flex-1 space-y-6">
             <CreatePost />
             <Feed />
           </div>
 
           {/* Right Sidebar */}
-          <div className="lg:col-span-1">
+          <div className="w-80 flex-shrink-0">
             <div className="sticky top-24 space-y-6">
+              <StreamingSection />
               <SuggestedAthletes />
               
               {/* Live Scores Widget */}
