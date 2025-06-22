@@ -13,17 +13,17 @@ export const TrendingTopics = () => {
   return (
     <div className="bg-white rounded-lg shadow-sm border p-6">
       <div className="flex items-center space-x-2 mb-4">
-        <TrendingUp className="w-5 h-5 text-blue-600" />
+        <TrendingUp className="w-5 h-5 text-orange-600" />
         <h3 className="font-semibold text-slate-900">Trending Topics</h3>
       </div>
       
       <div className="space-y-3">
         {topics.map((topic, index) => (
-          <div key={topic.tag} className="flex items-center justify-between py-2 hover:bg-slate-50 rounded-lg px-2 cursor-pointer transition-colors">
+          <div key={topic.tag} className="flex items-center justify-between py-2 hover:bg-orange-50 rounded-lg px-2 cursor-pointer transition-colors">
             <div className="flex items-center space-x-2">
               <span className="text-slate-400 font-medium">#{index + 1}</span>
-              <Hash className="w-4 h-4 text-blue-600" />
-              <span className="font-medium text-slate-900 hover:text-blue-600">
+              <Hash className="w-4 h-4 text-purple-600" />
+              <span className="font-medium text-slate-900 hover:text-orange-600">
                 {topic.tag}
               </span>
             </div>

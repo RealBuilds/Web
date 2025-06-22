@@ -25,11 +25,11 @@ export const CreatePost = () => {
           
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="sm" className="text-blue-600 hover:bg-blue-50">
+              <Button variant="ghost" size="sm" className="text-orange-600 hover:bg-orange-50">
                 <Image className="w-5 h-5 mr-2" />
                 Photo
               </Button>
-              <Button variant="ghost" size="sm" className="text-green-600 hover:bg-green-50">
+              <Button variant="ghost" size="sm" className="text-purple-600 hover:bg-purple-50">
                 <Video className="w-5 h-5 mr-2" />
                 Video
               </Button>
@@ -37,14 +37,14 @@ export const CreatePost = () => {
                 <Smile className="w-5 h-5 mr-2" />
                 Feeling
               </Button>
-              <Button variant="ghost" size="sm" className="text-red-600 hover:bg-red-50">
+              <Button variant="ghost" size="sm" className="text-teal-600 hover:bg-teal-50">
                 <MapPin className="w-5 h-5 mr-2" />
                 Location
               </Button>
             </div>
             
             <Button 
-              className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+              className="bg-gradient-to-r from-orange-600 to-purple-600 hover:from-orange-700 hover:to-purple-700"
               disabled={!postContent.trim()}
             >
               Share
