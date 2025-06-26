@@ -6,7 +6,7 @@ export const SuggestedAthletes = () => {
   const athletes = [
     {
       name: "Cory Willaims",
-      sport: "Track & Field",
+      sport: "Soccer",
       avatar: "/profile-cory-williams.jpg",
       followers: "892K",
       verified: true
