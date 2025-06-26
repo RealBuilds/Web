@@ -1,4 +1,3 @@
-
 import { UserPlus, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -6,23 +5,23 @@ import { Badge } from "@/components/ui/badge";
 export const SuggestedAthletes = () => {
   const athletes = [
     {
-      name: "Maya Thompson",
+      name: "Cory Willaims",
       sport: "Track & Field",
-      avatar: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=100&h=100&fit=crop&crop=face",
+      avatar: "/profile-cory-williams.jpg",
       followers: "892K",
       verified: true
     },
     {
-      name: "Jake Wilson",
+      name: "Hollis Robertson",
       sport: "Basketball",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+      avatar: "/profile-hollis-robertson.jpg",
       followers: "1.2M",
       verified: true
     },
     {
-      name: "Sofia Garcia", 
-      sport: "Soccer",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=100&h=100&fit=crop&crop=face",
+      name: "Ral Nwogbo", 
+      sport: "Football",
+      avatar: "/profile-sofia-garcia.jpg",
       followers: "567K",
       verified: true
     }
@@ -57,7 +56,6 @@ export const SuggestedAthletes = () => {
                   <Badge variant="secondary" className="text-xs">
                     {athlete.sport}
                   </Badge>
-                  <span className="text-xs text-slate-500">{athlete.followers}</span>
                 </div>
               </div>
             </div>

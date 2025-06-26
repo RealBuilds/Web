@@ -1,4 +1,3 @@
-
 import { ChevronLeft, ChevronRight, Plus, Play } from "lucide-react";
 import { useState } from "react";
 
@@ -14,22 +13,22 @@ export const Stories = () => {
     },
     {
       id: 2,
-      athlete: "Sarah Chen",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+      athlete: "Ral Nwogbo",
+      avatar: "/profile-sofia-garcia.jpg",
       hasNewStory: true,
       storyType: "training"
     },
     {
       id: 3,
-      athlete: "Marcus Johnson",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+      athlete: "Cory Williams",
+      avatar: "/profile-cory-williams.jpg",
       hasNewStory: true,
       storyType: "game"
     },
     {
       id: 4,
-      athlete: "Elena Rodriguez",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=100&h=100&fit=crop&crop=face",
+      athlete: "Hollis Robertson",
+      avatar: "/profile-hollis-robertson.jpg",
       hasNewStory: false,
       storyType: "recovery"
     }

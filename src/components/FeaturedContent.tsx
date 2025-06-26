@@ -1,4 +1,3 @@
-
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, MessageCircle, Share2, CheckCircle } from "lucide-react";
@@ -7,22 +6,22 @@ export const FeaturedContent = () => {
   const posts = [
     {
       id: 1,
-      athlete: "Marcus Johnson",
-      sport: "NFL",
+      athlete: "Ral Nwogbo",
+      sport: "NBA",
       verified: true,
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-      content: "Game day mentality isn't just about the 3 hours on the field. It's about the 165 hours of preparation that lead up to those moments. Every rep matters.",
-      image: "https://images.unsplash.com/photo-1566577739112-5180d4bf9390?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      avatar: "/profile-sofia-garcia.jpg",
+      content: "This has to be one of the best teams ever assembled. They should have won way more than they did.",
+      image: "/real-madrid-2024-25.jpg",
       likes: 4200,
       comments: 387,
       timeAgo: "2h ago"
     },
     {
       id: 2,
-      athlete: "Elena Rodriguez",
+      athlete: "Cory Williams",
       sport: "Tennis",
       verified: true,
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=100&h=100&fit=crop&crop=face",
+      avatar: "/profile-cory-williams.jpg",
       content: "Sometimes the biggest opponent is the voice in your head. Learning to quiet that doubt has been my greatest victory this season.",
       likes: 2800,
       comments: 234,
@@ -30,10 +29,10 @@ export const FeaturedContent = () => {
     },
     {
       id: 3,
-      athlete: "David Park",
+      athlete: "Hollis Robertson",
       sport: "Basketball",
       verified: true,
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+      avatar: "/profile-hollis-robertson.jpg",
       content: "To all the young athletes following their dreams: rejection is redirection. That team that didn't draft me led me to exactly where I needed to be.",
       image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       likes: 5600,

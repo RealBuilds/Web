@@ -1,4 +1,3 @@
-
 import { Play, Users, Eye, Dot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -6,30 +5,30 @@ export const StreamingSection = () => {
   const liveStreams = [
     {
       id: 1,
-      title: "Morning Basketball Training",
-      streamer: "Marcus Johnson",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+      title: "Morning Shootaround",
+      streamer: "Ral Nwogbo",
+      avatar: "/profile-sofia-garcia.jpg",
       viewers: 1247,
-      thumbnail: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=300&h=200&fit=crop",
+      thumbnail: "/basketball-morning-shootaround.jpg",
       category: "Basketball"
     },
     {
       id: 2,
       title: "Soccer Skills Masterclass",
-      streamer: "Elena Rodriguez",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=100&h=100&fit=crop&crop=face",
+      streamer: "Cory Williams",
+      avatar: "/profile-cory-williams.jpg",
       viewers: 892,
-      thumbnail: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=300&h=200&fit=crop",
+      thumbnail: "/soccer-skills-masterclass.jpg",
       category: "Soccer"
     },
     {
       id: 3,
       title: "Tennis Tournament Prep",
-      streamer: "Sarah Chen",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+      streamer: "Hollis Robertson",
+      avatar: "/profile-hollis-robertson.jpg",
       viewers: 634,
-      thumbnail: "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=300&h=200&fit=crop",
-      category: "Tennis"
+      thumbnail: "/squash-hollis-robertson.jpg",
+      category: "Squash"
     }
   ];
 
