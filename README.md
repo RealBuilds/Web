@@ -1,39 +1,18 @@
-# Welcome to your Lovable project
+# Verified Athlete Sphere
 
-## Project info
+A platform for verified athletes and fans to connect, share, and stream live.
 
-**URL**: https://lovable.dev/projects/fb53b0e0-c536-4198-8a31-843320f17fef
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/fb53b0e0-c536-4198-8a31-843320f17fef) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Getting Started
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/RealBuilds/NonemptyRepo
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+git branch -M main
+git push -u origin main
 ```
 
 **Edit a file directly in GitHub**
@@ -60,14 +39,4 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/fb53b0e0-c536-4198-8a31-843320f17fef) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
